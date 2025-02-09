@@ -1,0 +1,16 @@
+input{
+    width: 300px;
+}
+.error{
+    color: red;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    font-size: 20px;
+    background-color: aqua;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}

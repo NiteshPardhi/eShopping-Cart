@@ -1,0 +1,31 @@
+<div class="container">
+    <table class="table table-bordered text-center">
+        <thead>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of cartData">
+                <td>
+                    <img src="{{product.img}}" alt="" width="200px" height="100px">
+                </td>
+                <td>{{product.name}}</td>
+                <td>{{product.price | currency:'INR'}}</td>
+                <td>
+                    <button class="btn btn-secondary" type="button" (click)="removeProduct(product)"><i class="bi bi-dash-lg"></i></button>
+                    [{{product.addedQty}}]
+                    <button class="btn btn-success" type="button" (click)="addProduct(product)"><i class="bi bi-plus-lg"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h2>Total Products Amount = <span class="text-danger">{{totalProductPrice | currency:'INR'}}</span></h2>
+    </div>
+      <div> 
+        <button class="btn btn-danger" (click)="onCancel()">Cancel</button> |
+        <button class="btn btn-info">Buy Now</button>
+      </div>
+  </div>

@@ -1,0 +1,24 @@
+input{
+    width: 400px;
+}
+.btn-danger{
+    width: 150px;
+    border-radius: 25px;
+}
+.btn:hover{
+    background-color: green;
+}
+.h1{
+    font-size: 30px;
+}
+.text-light{
+    margin-left: 15px;
+}
+.card{
+    box-shadow: 3px 3px 7px ;
+    margin-bottom: 10px;
+}
+.error{
+    color: red;
+    font-size: 20px;
+}

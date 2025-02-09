@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default bg-dark">
+    <div class="container-fluid">
+        <div>
+            <a class="navbar-brand fw-bold text-warning h1">e-Shopping</a>
+            <a class="navbar-item" routerLink="/content">Products List</a>
+        </div>
+        <div class="text-end">
+            <button type="button" class="btn btn-success mx-3" *ngIf="!isAuthenticated" (click)="openLogin()">
+                Login
+            </button>
+            <button type="button" class="btn btn-danger mx-3" (click)="OnLogout()" *ngIf="isAuthenticated" routerLink="/content">
+                Logout
+            </button>
+            <button type="button" class="btn btn-primary" (click)="openCartDialog()">
+                <i class="bi bi-cart-plus"></i> My Shopping Cart <span class="badge-lg text-warning">({{noOfAddedProducts}})</span>
+            </button>
+        </div>
+    </div>
+</nav>
