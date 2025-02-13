@@ -8,7 +8,6 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnInit {
- 
   productArray: any = [];
   searchInput: string = '';
   filterData: any = [];
@@ -18,24 +17,25 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.productArray = this.cartService.getProductsArray();
-    console.log('products array',this.productArray);
+    console.log('products array', this.productArray);
 
     this.newArray = this.productArray;
   }
 
-  onSelectProduct(id:any, name:any, description: any){
-    this.router.navigate(['/content-details', id], {queryParams: {name}, fragment: description})
+  onSelectProduct(id: any, name: any, description: any) {
+    this.router.navigate(['/content-details', id], {
+      queryParams: { name },
+      fragment: description,
+    });
   }
 
-
-  search(event: any){
+  search(event: any) {
     this.searchInput = event.target.value;
-    console.log(this.searchInput)
+    console.log(this.searchInput);
 
     this.filterData = this.newArray.filter((item: any) => {
       return item.name.toLowerCase().includes(this.searchInput.toLowerCase());
-    })
+    });
     this.productArray = this.filterData;
   }
-  
 }

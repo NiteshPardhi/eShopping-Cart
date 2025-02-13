@@ -1,49 +1,48 @@
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
-import { BehaviorSubject, Subject } from "rxjs";
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
+export class AuthService {
+  isLogin = false;
+  isAuthSubject = new BehaviorSubject<any>([]);
+  storeData: any;
 
-export class AuthService{
-
-    isLogin = false;
-    isAuthSubject = new BehaviorSubject<any>([]);
-    storeData: any;
-
-  constructor(private router: Router){
+  constructor(private router: Router) {
     this.onCheckLogin();
   }
 
-  onLogin(loginUser:{email: string, password: string}){
-
+  onLogin(loginUser: { email: string; password: string }) {
     this.isLogin = true;
-    this.storeData = JSON.parse(localStorage.getItem('user') || '{}')
+    this.storeData = JSON.parse(localStorage.getItem('user') || '{}');
 
-    if(this.storeData.email == loginUser.email && this.storeData.password == loginUser.password){
+    if (
+      this.storeData.email == loginUser.email &&
+      this.storeData.password == loginUser.password
+    ) {
       localStorage.setItem('isLoggedIn', 'true');
       this.onCheckLogin();
       alert('Login Successfull.....!');
-    }else{
+    } else {
       alert('Login Failed....Wrong Crediential....!');
     }
   }
 
-  onLogout(){
+  onLogout() {
     this.isLogin = false;
     localStorage.removeItem('isLoggedIn');
     this.isAuthSubject.next(this.isLogin);
     localStorage.removeItem('cartAddedItem');
   }
 
-  onCheckLogin(){
+  onCheckLogin() {
     let userData = localStorage.getItem('isLoggedIn');
-    if(userData){
+    if (userData) {
       this.isAuthSubject.next(true);
-    }else{
+    } else {
       this.isAuthSubject.next(false);
     }
   }
-
 }

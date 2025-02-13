@@ -1,9 +1,9 @@
 <div class="container mt-5">
-    <div class="row" *ngFor="let product of selectedData">
+    <div class="row mt-5" *ngFor="let product of selectedData">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a routerLink="/content">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">{{product.name}}</li>
+                <li class="breadcrumb-item"><a routerLink="/content">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{product.name}}</li>
             </ol>
         </nav>
         <div class="col">
@@ -16,13 +16,9 @@
                 <form [formGroup]="inputForm">
                     <div class="form-group">
                         <label for="qty">Quantity</label>
-                        <input type="number" 
-                               placeholder="Select Quantity" 
-                               formControlName="qty" 
-                               class="form-control"
-                               (keyup)="onCheckQty(product)"
-                               (click)="onCheckQty(product)"
-                               (keypress)="onChechOperator($event)">
+                        <input type="number" placeholder="Select Quantity" formControlName="qty" class="form-control"
+                            (keyup)="onCheckQty(product)" (click)="onCheckQty(product)"
+                            (keypress)="onChechOperator($event)">
                         <div class="form-text">
                             <span class="error"
                                 *ngIf="inputForm.get('qty')?.hasError('required') && (inputForm.get('qty')?.touched || isSubmit)">
@@ -36,10 +32,11 @@
                     </div>
                 </form>
             </div>
-            
+
             <div class="mt-3">
                 <p>Price Per Quantity = <span class="h4">{{product.price | currency:'INR'}}</span> </p>
-                <p>Total Price Per Quantity = <span class="h4 text-success">{{totalProductPrice | currency:'INR'}}</span> </p>
+                <p>Total Price Per Quantity = <span class="h4 text-success">{{totalProductPrice |
+                        currency:'INR'}}</span> </p>
             </div>
 
             <button class="btn btn-danger mt-3" type="button" (click)="openAddToCart(product)">

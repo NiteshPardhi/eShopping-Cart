@@ -5,7 +5,7 @@
     z-index: 9999;
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 .left{
     display: flex;
@@ -18,7 +18,7 @@
     font-size: 20px;
     color: aliceblue;
     margin-left: 20px;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 .navbar-item:hover{
     color: aqua;

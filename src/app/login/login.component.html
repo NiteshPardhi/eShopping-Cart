@@ -5,10 +5,12 @@
             <label for="email" class="form-label">Email Address</label>
             <input type="email" class="form-control" placeholder="name@example.com" formControlName="email">
             <div class="form-text">
-                <span class="form-text" *ngIf="loginForm.get('email')?.hasError('required') && (loginForm.get('email')?.touched || submitted)">
+                <span class="form-text"
+                    *ngIf="loginForm.get('email')?.hasError('required') && (loginForm.get('email')?.touched || submitted)">
                     Email is Required
                 </span>
-                <span class="form-text" *ngIf="loginForm.get('email')?.hasError('email') && (loginForm.get('email')?.touched || submitted)">
+                <span class="form-text"
+                    *ngIf="loginForm.get('email')?.hasError('email') && (loginForm.get('email')?.touched || submitted)">
                     Valid Email is Required
                 </span>
             </div>
@@ -16,7 +18,8 @@
         <div class="mb-3 form-group">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" placeholder="Enter Password" formControlName="password">
-            <span class="form-text" *ngIf="!loginForm.get('password')?.valid && (loginForm.get('password')?.touched || submitted)">
+            <span class="form-text"
+                *ngIf="!loginForm.get('password')?.valid && (loginForm.get('password')?.touched || submitted)">
                 Password is Required
             </span>
         </div>

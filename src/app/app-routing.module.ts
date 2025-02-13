@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'content-details', component: ContentDetailsComponent },
   { path: 'content-details/:id', component: ContentDetailsComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'header', component: HeaderComponent},
+  { path: 'header', component: HeaderComponent },
 
   //Other wise Redirect To
   { path: '**', redirectTo: '/home' },
