@@ -19,6 +19,27 @@ export class CartService {
     },
     {
       id: 4, description: 'Any time favorites', price: 40, name: 'T-sirt', img: 'assets/tsrt.jpeg'
+    },
+    {
+      id: 5, description: 'The best quality ever india', price: 20, name: 'Jins', img: 'assets/tsrt1.jpeg'
+    },
+    {
+      id: 6, description: 'Perfect to all size', price: 90, name: 'Sirt', img: 'assets/srt1.jpeg'
+    },
+    {
+      id: 7, description: 'The best stylish for men', price: 50, name: 'Bracelate', img: 'assets/bracelate.jpg'
+    },
+    {
+      id: 8, description: 'Any time favorites', price: 40, name: 'T-sirt', img: 'assets/girls fashion.jpeg'
+    },
+    {
+      id: 9, description: 'The best stylish for men', price: 50, name: 'LCD', img: 'assets/electronics.jpeg'
+    },
+    {
+      id: 10, description: 'Any time favorites', price: 40, name: 'iphone 15', img: 'assets/mobile.jpg'
+    },
+    {
+      id: 11, description: 'Any time favorites', price: 40, name: 'Neck Chain', img: 'assets/neck-chain.jpeg'
     }
   ];
 

@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     ContentDetailsComponent,
     FilterPipe,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,6 @@ export class AuthService{
 
     this.isLogin = true;
     this.storeData = JSON.parse(localStorage.getItem('user') || '{}')
-    console.log('storeData',this.storeData);
 
     if(this.storeData.email == loginUser.email && this.storeData.password == loginUser.password){
       localStorage.setItem('isLoggedIn', 'true');

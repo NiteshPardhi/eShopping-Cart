@@ -1,3 +1,15 @@
+.container-fluid {
+    background-color: rgb(65, 68, 68);
+    /* padding: 40px 10px 10px 10px; */
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.left{
+    display: flex;
+}
 .navbar-brand{
     font-size: 30px;
 }
@@ -6,4 +18,13 @@
     font-size: 20px;
     color: aliceblue;
     margin-left: 20px;
+    padding-top: 20px;
+}
+.navbar-item:hover{
+    color: aqua;
+    font-weight: 900;
+}
+.btn-success:hover{
+    background-color: rgb(94, 94, 237);
+    color: aliceblue;
 }

@@ -1,9 +1,9 @@
 <div class="container">
 
-    <input type="search" placeholder="Search Product...By Name" class="form-control mt-4" (keyup)="search($event)">
+    <input type="search" placeholder="Search Product...By Name" class="form-control" (keyup)="search($event)">
 
     <div class="row mt-4">
-        <div class="col-md-3" *ngFor="let product of productArray">
+        <div class="col-md-3 mt-3" *ngFor="let product of productArray">
             <a style="cursor: pointer;" (click)="onSelectProduct(product.id,product.name,product.description)">
                 <div class="card">
                     <img src="{{product.img}}" class="card-img-top" height="200px">
