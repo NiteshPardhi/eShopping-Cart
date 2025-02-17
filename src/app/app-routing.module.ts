@@ -9,8 +9,8 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   //Default path
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
 
   // Other URLs
   { path: 'content', component: ContentComponent },

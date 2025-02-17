@@ -14,9 +14,9 @@
                 <td>{{product.name}}</td>
                 <td>{{product.price | currency:'INR'}}</td>
                 <td>
-                    <button class="btn btn-secondary" type="button" (click)="removeProduct(product)"><i class="bi bi-dash-lg"></i></button>
+                    <button class="btn btn-secondary mx-2" type="button" (click)="removeProduct(product)"><i class="bi bi-dash-lg"></i></button>
                     [{{product.addedQty}}]
-                    <button class="btn btn-success" type="button" (click)="addProduct(product)"><i class="bi bi-plus-lg"></i></button>
+                    <button class="btn btn-success mx-2" type="button" (click)="addProduct(product)"><i class="bi bi-plus-lg"></i></button>
                 </td>
             </tr>
         </tbody>
@@ -25,7 +25,7 @@
         <h2>Total Products Amount = <span class="text-danger">{{totalProductPrice | currency:'INR'}}</span></h2>
     </div>
       <div> 
-        <button class="btn btn-danger" (click)="onCancel()">Cancel</button> |
-        <button class="btn btn-info">Buy Now</button>
+        <button class="btn btn-danger mx-2" (click)="onCancel()">Cancel</button> |
+        <button class="btn btn-info mx-1">Buy Now</button>
       </div>
   </div>

@@ -7,7 +7,7 @@
             </ol>
         </nav>
         <div class="col">
-            <img src="{{product.img}}" height="250px" width="300px">
+            <img src="{{product.img}}" height="300px" width="500px">
         </div>
         <div class="col">
             <h1 class="fw-bold">{{product.name}}</h1>
@@ -34,12 +34,12 @@
             </div>
 
             <div class="mt-3">
-                <p>Price Per Quantity = <span class="h4">{{product.price | currency:'INR'}}</span> </p>
-                <p>Total Price Per Quantity = <span class="h4 text-success">{{totalProductPrice |
+                <p>Price Per Quantity = <span class="h4 mx-2">{{product.price | currency:'INR'}}</span> </p>
+                <p>Total Price Per Quantity = <span class="h4 text-success mx-2">{{totalProductPrice |
                         currency:'INR'}}</span> </p>
             </div>
 
-            <button class="btn btn-danger mt-3" type="button" (click)="openAddToCart(product)">
+            <button class="btn btn-secondary mt-3" type="button" (click)="openAddToCart(product)">
                 <i class="bi bi-file-plus"></i> Add Product
             </button>
         </div>
@@ -47,10 +47,10 @@
 </div>
 
 <!-- for Similar products -->
-<div class="container mt-5">
+<div class="container mt-4">
     <h2>Similar Products...</h2>
     <div class="row">
-        <div class="col-md-3" *ngFor="let product of productData">
+        <div class="col-md-3 mt-4" *ngFor="let product of productData">
             <a style="cursor: pointer;" (click)="onChangeProduct(product.id,product.name,product.description)">
                 <div class="card">
                     <img src="{{product.img}}" class="card-img-top" height="200px">
