@@ -17,7 +17,7 @@
         </div>
         <div class="mb-3 form-group">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" placeholder="Enter Password" formControlName="password">
+            <input type="password" class="form-control" placeholder="Enter Password" formControlName="password" (keyup.enter)="onSubmit()">
             <span class="form-text"
                 *ngIf="!loginForm.get('password')?.valid && (loginForm.get('password')?.touched || submitted)">
                 Password is Required

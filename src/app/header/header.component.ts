@@ -39,9 +39,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   openCartDialog() {
+    // this.dialog.open(CartComponent, {
+    //   width: '80%',
+    //   height: "50%"
+    // });
     if (this.isAuthenticated) {
       this.dialog.open(CartComponent, {
-        width: '60%',
+        width: '80%',
+        height: "50%"
       });
     } else {
       this.dialog.open(LoginComponent, {
@@ -62,7 +67,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   OnLogout() {
-    this.noOfAddedProducts = null;
+    this.noOfAddedProducts = 0;
     this.authService.onLogout();
   }
 

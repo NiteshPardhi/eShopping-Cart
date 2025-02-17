@@ -1,4 +1,14 @@
-.h3{
-    margin-left: 6px;
-}
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+._image{
+    object-fit: contain;
+    width: 200px;
+    height: 100px;
+}
+.table{
+    overflow-y: scroll;
+}
+th{
+    padding: 15px;
+    background-color: gray;
+    font-size: 15px;
+}

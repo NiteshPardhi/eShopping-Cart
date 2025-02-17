@@ -1,5 +1,6 @@
 .container-fluid {
   padding-bottom: 150px;
+  max-width: 1500px;
 }
 input {
   width: 300px;
@@ -29,5 +30,10 @@ nav {
   background-color: #424242;
 }
 .card-img-top {
+  object-fit: contain;
+}
+._image{
+  height: 300px;
+  width: 500px;
   object-fit: contain;
 }

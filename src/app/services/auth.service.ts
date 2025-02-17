@@ -34,7 +34,7 @@ export class AuthService {
     this.isLogin = false;
     localStorage.removeItem('isLoggedIn');
     this.isAuthSubject.next(this.isLogin);
-    localStorage.removeItem('cartAddedItem');
+    // localStorage.removeItem('cartAddedItem');
   }
 
   onCheckLogin() {

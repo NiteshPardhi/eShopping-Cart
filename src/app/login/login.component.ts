@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       (data: any) => {
         this.product = data;
         this.productQty = data.qty;
-        console.log('new data', this.product);
+        // console.log('new data', this.product);
       }
     );
 
@@ -78,5 +78,9 @@ export class LoginComponent implements OnInit {
 
   onCancel() {
     this.dialog.closeAll();
+  }
+
+  ngOnDestroy(): void {
+    this.loginSubscription.unsubscribe();
   }
 }
