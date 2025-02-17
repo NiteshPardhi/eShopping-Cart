@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     public dialog: MatDialog,
     private cartService: CartService,
     private authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.subscription = this.cartService.setTotalNoSubject.subscribe(
@@ -39,9 +39,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   openCartDialog() {
-    this.dialog.open(CartComponent, {
-      width: '60%',
-    });
+    if (this.isAuthenticated) {
+      this.dialog.open(CartComponent, {
+        width: '60%',
+      });
+    } else {
+      this.dialog.open(LoginComponent, {
+        width: '40%',
+      });
+    }
   }
 
   openLogin() {

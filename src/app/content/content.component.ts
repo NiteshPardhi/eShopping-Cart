@@ -2,13 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
 
+export interface ProductData{
+  id:number,
+  name: string
+  description: string,
+  price: number,
+  img: string
+}
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnInit {
-  productArray: any = [];
+  productArray: ProductData[] = [];
   searchInput: string = '';
   filterData: any = [];
   newArray: any = [];

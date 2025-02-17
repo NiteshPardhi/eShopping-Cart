@@ -6,7 +6,13 @@ import { Subscription } from 'rxjs';
 import { LoginComponent } from '../login/login.component';
 import { AuthService } from '../services/auth.service';
 import { CartService } from '../services/cart.service';
-
+export interface ProductData{
+  id:number,
+  name: string
+  description: string,
+  price: number,
+  img: string
+}
 @Component({
   selector: 'app-content-details',
   templateUrl: './content-details.component.html',
@@ -19,7 +25,7 @@ export class ContentDetailsComponent implements OnInit, OnDestroy {
   isSubmit = false;
   newId: any;
   selectedData: any = [];
-  productData: any = [];
+  productData: ProductData[] = [];
   totalProductPrice: any = 0;
 
   constructor(
