@@ -61,7 +61,7 @@ export class ContentDetailsComponent implements OnInit, OnDestroy {
   openAddToCart(product: any) {
     product.qty = this.inputForm.value.qty;
     this.cartService._prodSubject.next(product);
-    console.log('product', product);
+    // console.log('product', product);
 
     if (this.inputForm.invalid) {
       this.isSubmit = true;

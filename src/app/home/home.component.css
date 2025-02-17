@@ -1,0 +1,32 @@
+.heading {
+  padding-top: 206px;
+  padding-bottom: 80px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 51px;
+  color: azure;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.25em; /* Adjust as needed */
+  animation: typing 8.5s steps(90, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.text {
+  text-align: center;
+  padding-top: 15px;
+}

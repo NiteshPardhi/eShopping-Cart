@@ -128,7 +128,7 @@ export class CartService {
       this.addeddProductList.push({ ...product, addedQty: qty });
     } else {
       this.addeddProductList[index].addedQty += qty;
-      console.log('added products', this.addeddProductList);
+      // console.log('added products', this.addeddProductList);
       if (this.addeddProductList[index].addedQty <= 0) {
         this.addeddProductList.splice(index, 1);
       }
