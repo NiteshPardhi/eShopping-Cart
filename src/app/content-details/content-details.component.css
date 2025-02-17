@@ -13,11 +13,14 @@ a{
 }
 nav{
     font-size: 20px;
-    background-color: aqua;
+    background-color: #989dd1;
     padding-top: 15px;
     margin-bottom: 10px;
 }
 .card{
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     margin-bottom: 10px;
+}
+.card-body{
+    background-color: #424242;
 }

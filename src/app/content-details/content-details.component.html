@@ -2,8 +2,8 @@
     <div class="row mt-5" *ngFor="let product of selectedData">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a routerLink="/content">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{product.name}}</li>
+                <li class="breadcrumb-item"><a routerLink="/content"><span><i class="bi bi-arrow-left-square-fill"></i></span> Back</a></li>
+                <li class="breadcrumb-item active" >{{product.name}}</li>
             </ol>
         </nav>
         <div class="col">
@@ -40,7 +40,7 @@
             </div>
 
             <button class="btn btn-secondary mt-3" type="button" (click)="openAddToCart(product)">
-                <i class="bi bi-file-plus"></i> Add Product
+                <i class="bi bi-file-plus"></i> Add Product to Cart
             </button>
         </div>
     </div>
@@ -55,7 +55,7 @@
                 <div class="card">
                     <img src="{{product.img}}" class="card-img-top" height="200px">
                     <div class="card-body">
-                        <div class="h4">
+                        <div class="h4 text-light">
                             {{product.name}}
                         </div>
                         <div class="text-danger">

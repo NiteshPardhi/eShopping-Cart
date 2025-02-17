@@ -1,6 +1,9 @@
 <div class="container">
 
-    <input type="search" placeholder="Search Product...By Name" class="form-control" (keyup)="search($event)">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" class="form-control" placeholder="Search Product...By Name" (keyup)="search($event)">
+    </div>
 
     <div class="row mt-4">
         <div class="col-md-3 mt-4" *ngFor="let product of productArray">
@@ -8,10 +11,10 @@
                 <div class="card">
                     <img src="{{product.img}}" class="card-img-top" height="200px">
                     <div class="card-body">
-                        <div class="h4">
+                        <div class="h4 text-light">
                             {{product.name}}
                         </div>
-                        <div class="text-danger">
+                        <div class="text-warning">
                             {{product.description}}
                         </div>
                         <span class="text-success h5">
