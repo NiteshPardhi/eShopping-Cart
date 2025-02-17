@@ -13,7 +13,7 @@ export class ContentComponent implements OnInit {
   filterData: any = [];
   newArray: any = [];
 
-  constructor(private cartService: CartService, private router: Router) {}
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.productArray = this.cartService.getProductsArray();
@@ -29,12 +29,12 @@ export class ContentComponent implements OnInit {
     });
   }
 
-  search(event: any) {
+  async search(event: any) {
     this.searchInput = event.target.value;
     console.log(this.searchInput);
 
-    this.filterData = this.newArray.filter((item: any) => {
-      return item.name.toLowerCase().includes(this.searchInput.toLowerCase());
+    this.filterData = await this.newArray.filter((item: any) => {
+      return item.name.toLowerCase().includes(this.searchInput.toLowerCase().trim());
     });
     this.productArray = this.filterData;
   }
