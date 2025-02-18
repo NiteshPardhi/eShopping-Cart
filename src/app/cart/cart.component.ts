@@ -14,7 +14,7 @@ export class CartComponent implements OnInit, OnDestroy {
 
   totalProductPrice: any;
   cartData: any = [];
-  cartSubscription! : Subscription;
+  cartSubscription!: Subscription;
   isLoggin = false;
 
   constructor(public dialog: MatDialog, private cartService: CartService, private authService: AuthService) { }
@@ -24,31 +24,31 @@ export class CartComponent implements OnInit, OnDestroy {
       this.cartData = data;
       this.getTotal();
     })
-    
+
     this.cartSubscription = this.authService.isAuthSubject.subscribe((auth: any) => {
       this.isLoggin = auth;
-      if(!this.isLoggin){
+      if (!this.isLoggin) {
         this.cartData = [];
         this.totalProductPrice = 0;
       }
     })
   }
 
-  onCancel(){
+  onCancel() {
     this.dialog.closeAll();
   }
 
-  getTotal(){
-    this.totalProductPrice = this.cartData.reduce((total:any, item: any) => {
+  getTotal() {
+    this.totalProductPrice = this.cartData.reduce((total: any, item: any) => {
       return total + (item.addedQty * item.price)
     }, 0);
   }
 
-  removeProduct(product: any){
-   this.cartService.addToCart(product, -1)
+  removeProduct(product: any) {
+    this.cartService.addToCart(product, -1)
   }
 
-  addProduct(product: any){
+  addProduct(product: any) {
     this.cartService.addToCart(product, +1)
   }
 
@@ -57,7 +57,7 @@ export class CartComponent implements OnInit, OnDestroy {
   // }
 
   ngOnDestroy(): void {
-      this.cartSubscription.unsubscribe();
+    this.cartSubscription.unsubscribe();
   }
 
 }

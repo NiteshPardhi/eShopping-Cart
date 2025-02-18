@@ -6,8 +6,8 @@ import { Subscription } from 'rxjs';
 import { LoginComponent } from '../login/login.component';
 import { AuthService } from '../services/auth.service';
 import { CartService } from '../services/cart.service';
-export interface ProductData{
-  id:number,
+export interface ProductData {
+  id: number,
   name: string
   description: string,
   price: number,
@@ -34,7 +34,7 @@ export class ContentDetailsComponent implements OnInit, OnDestroy {
     private authService: AuthService,
     private activatedRoute: ActivatedRoute,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.inputForm = new FormGroup({

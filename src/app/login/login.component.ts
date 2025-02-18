@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     public dialog: MatDialog,
     private cartService: CartService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loginSubscription = this.cartService._prodSubject.subscribe(
