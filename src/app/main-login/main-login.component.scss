@@ -1,0 +1,122 @@
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    // flex-direction: column;
+    overflow-y: scroll;
+
+    &_left {
+        width: 54%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(135deg, rgb(237, 232, 232), #323273);
+        justify-content: space-between;
+        padding: 25px;
+
+        &_header {
+            font-size: 50px;
+            color: white;
+            font-weight: bold;
+        }
+
+        &_info {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        &_footer {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 30px;
+        }
+    }
+
+    &_right {
+        width: 46%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(135deg, rgb(237, 232, 232), #323273);
+
+        &_mainForm {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 15px;
+            width: 65%;
+
+            &_header {
+                text-align: center;
+                padding-top: 25px;
+
+                h3 {
+                    color: #323273;
+                    font-size: 35px;
+                    font-weight: bold;
+                }
+            }
+
+            &_text {
+                text-align: center;
+                padding-top: 15px;
+            }
+    
+            &_btn {
+                padding: 30px 30px 0px 150px;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    color: #323273;
+                    width: 50%;
+                    padding: 5px;
+                    outline: unset;
+                    border: unset;
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+            }
+
+            &_form {
+                padding: 40px 40px 10px 40px;
+                display: flex;
+                flex-direction: column;
+    
+                &_inputGroup {
+                    margin-bottom: 20px;
+
+                    input {
+                        padding: 5px;
+                    }
+                }
+            }
+
+            &_submitBtn {
+                justify-content: center;
+                display: flex;
+
+                button {
+                    color: white;
+                    background-color: #323273;
+                    padding: 8px;
+                    text-align: center;
+                    width: 50%;
+                }
+            }
+
+            hr {
+                margin: 30px 40px 20px 40px;
+            }
+
+            &_footer1 {   
+              padding: 0px 30px 30px 35px;
+              text-align: center;     
+            }
+        }
+    }
+}
+.error_text{
+    color: red;
+}

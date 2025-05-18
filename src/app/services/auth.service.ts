@@ -9,9 +9,12 @@ export class AuthService {
   isLogin = false;
   isAuthSubject = new BehaviorSubject<any>([]);
   storeData: any;
+  user:any;
 
   constructor(private router: Router) {
     this.onCheckLogin();
+    this.user = JSON.parse(localStorage.getItem('main-loginCrediential') || '{}');
+
   }
 
   onLogin(loginUser: { email: string; password: string }) {
@@ -44,5 +47,24 @@ export class AuthService {
     } else {
       this.isAuthSubject.next(false);
     }
+  }
+
+  onMainLogin(loginForm:{userName:string, password:string}){
+    // console.log(this.user);
+    //this.loggedIn = true;
+    if(loginForm.userName != this.user.userName || loginForm.password != this.user.password){
+      alert('Login Failed....Wrong Crediential..?');
+    } else {
+      // this.loggedIn = true;
+      alert('Login Successfull....!');
+      this.router.navigate(['/home']);
+    }
+
+  }
+
+  onMainLogout(){
+    localStorage.removeItem('main-loginCrediential');
+    this.router.navigate(['/main-login']);
+
   }
 }

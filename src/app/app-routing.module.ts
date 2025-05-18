@@ -4,11 +4,15 @@ import { ContentDetailsComponent } from './content-details/content-details.compo
 import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { MainLoginComponent } from './main-login/main-login.component';
 
 const routes: Routes = [
   //Default path
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+
+  // { path: '', redirectTo: '/main-login', pathMatch: 'full' },
+  // { path: 'main-login', component: MainLoginComponent },
 
   // Other URLs
   { path: 'content', component: ContentComponent },
